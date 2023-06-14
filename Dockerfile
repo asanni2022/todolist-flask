@@ -1,8 +1,8 @@
 FROM python:alpine
 ENV DB_URL=localhost
-ENV DB_NAME=todo_db
+ENV DB_NAME=tawazun
 ENV DB_USERNAME=root
-ENV DB_PASSWORD=Chandra@123
+ENV DB_PASSWORD=DevOps@2022
 ENV DB_PORT=3306
 
 RUN apk update && \

@@ -8,8 +8,8 @@ CORS(app)
 # Configuring MySQL database
 app.config['DB_URL'] = 'localhost'
 app.config['DB_USERNAME'] = 'root'
-app.config['DB_PASSWORD'] = 'Chandra@123'
-app.config['DB_NAME'] = 'todo_db'
+app.config['DB_PASSWORD'] = 'DevOps@123'
+app.config['DB_NAME'] = 'tawazun'
 app.config['MYSQL_DATABASE_PORT'] = 3306
 mysql = MySQL()
 mysql.init_app(app)
