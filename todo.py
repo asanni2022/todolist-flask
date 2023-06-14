@@ -6,10 +6,10 @@ app = Flask(__name__)
 CORS(app)
 
 # Configuring MySQL database
-app.config['MYSQL_DATABASE_HOST'] = 'todo-database-server'
-app.config['MYSQL_DATABASE_USER'] = 'chandra'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'Chandra@123'
-app.config['MYSQL_DATABASE_DB'] = 'todo_db'
+app.config['DB_URL'] = 'localhost'
+app.config['DB_USERNAME'] = 'root'
+app.config['DB_PASSWORD'] = 'Chandra@123'
+app.config['DB_NAME'] = 'todo_db'
 app.config['MYSQL_DATABASE_PORT'] = 3306
 mysql = MySQL()
 mysql.init_app(app)
