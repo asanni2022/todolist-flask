@@ -6,11 +6,16 @@ app = Flask(__name__)
 CORS(app)
 
 # Configuring MySQL database
-app.config['DB_URL'] = 'localhost'
-app.config['DB_USERNAME'] = 'root'
-app.config['DB_PASSWORD'] = 'DevOps@123'
-app.config['DB_NAME'] = 'tawazun'
-app.config['MYSQL_DATABASE_PORT'] = 3306
+# app.config['DB_URL'] = 'localhost'
+# app.config['DB_USERNAME'] = 'root'
+# app.config['DB_PASSWORD'] = 'DevOps@123'
+# app.config['DB_NAME'] = 'tawazun'
+# app.config['MYSQL_DATABASE_PORT'] = 3306
+app.config['DB_URL'] = os.environ.get('DB_URL')
+app.config['DB_USERNAME'] = os.environ.get('DB_USERNAME')
+app.config['DB_PASSWORD'] = os.environ.get('DB_PASSWORD')
+app.config['DB_NAME'] = os.environ.get('DB_NAME')
+app.config['DB_PORT'] = int(os.environ.get('DB_PORT'))
 mysql = MySQL()
 mysql.init_app(app)
 connection = mysql.connect()
