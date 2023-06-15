@@ -11,11 +11,11 @@ CORS(app)
 # app.config['DB_PASSWORD'] = 'DevOps@123'
 # app.config['DB_NAME'] = 'tawazun'
 # app.config['MYSQL_DATABASE_PORT'] = 3306
-app.config['DB_URL'] = os.environ.get('DB_URL')
-app.config['DB_USERNAME'] = os.environ.get('DB_USERNAME')
-app.config['DB_PASSWORD'] = os.environ.get('DB_PASSWORD')
-app.config['DB_NAME'] = os.environ.get('DB_NAME')
-app.config['DB_PORT'] = int(os.environ.get('DB_PORT'))
+app.config['MYSQL_DATABASE_HOST'] = os.environ.get('DB_URL')
+app.config['MYSQL_DATABASE_USER'] = os.environ.get('DB_USERNAME')
+app.config['MYSQL_DATABASE_PASSWORD'] = os.environ.get('DB_PASSWORD')
+app.config['MYSQL_DATABASE_DB'] = os.environ.get('DB_NAME')
+app.config['MYSQL_DATABASE_PORT'] = int(os.environ.get('DB_PORT'))
 mysql = MySQL()
 mysql.init_app(app)
 connection = mysql.connect()
